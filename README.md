@@ -15,3 +15,9 @@
 node v14.15.1
 
 npm 6.14.8
+
+## 安装工具
+
+```shell
+> npm i koa-generic-session --save
+```
