@@ -6,12 +6,19 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 const session = require('koa-generic-session')
+const cors = require('koa2-cors')
 
 const index = require('./routes/index')
 const users = require('./routes/users')
 
 // error handler
 onerror(app)
+
+// CORS 配置
+app.use(cors({
+  origin: 'http://localhost:8080',
+  credentials: true // 允许跨域带cookie
+}))
 
 // session配置
 app.keys = ['asdf2342^sfa']

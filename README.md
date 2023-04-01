@@ -20,4 +20,5 @@ npm 6.14.8
 
 ```shell
 > npm i koa-generic-session --save
+> npm i koa2-cors --save
 ```
