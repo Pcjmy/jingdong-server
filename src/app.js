@@ -21,7 +21,7 @@ app.use(cors({
 }))
 
 // session配置
-app.keys = ['asdf2342^sfa']
+app.keys = ['asdfZK2342^sfa']
 app.use(session({
   // 配置cookie
   cookie: {
