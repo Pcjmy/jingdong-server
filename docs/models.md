@@ -7,7 +7,7 @@
 ```js
 {
     _id:'xxx',
-    username:'18677778888',
+    username:'hello',
     password:'123'
 }
 ```
@@ -17,7 +17,7 @@
 ```js
 {
     _id:'xxx',
-    username:'18677778888',//就和用户产生关联
+    username:'hello',//就和用户产生关联
     city:'北京',
     department:'xxx小区',
     houseNumber:'门牌号',
