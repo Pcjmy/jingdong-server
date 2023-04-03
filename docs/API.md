@@ -24,7 +24,7 @@
 ```js
 {
   errno: 0,
-  message: 'errno !==0时的错误信息'
+  message: 'errno !== 0时的错误信息'
 }
 ```
 
@@ -52,7 +52,34 @@
 ```js
 {
   errno: 0,
-  message: 'errno !==0时的错误信息'
+  message: 'errno !== 0时的错误信息'
+}
+```
+
+## 获取用户信息
+
+### url
+
+`/api/user/info`
+
+### method
+
+`get`
+
+### request body
+
+无
+
+### response body
+
+```js
+{
+    errno: 0,
+    data:
+    {
+        username: 'hello'
+    }
+    message: 'errno !== 0时的错误信息'
 }
 ```
 
