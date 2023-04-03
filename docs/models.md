@@ -50,6 +50,7 @@
     imgUrl:'xxx.png',
     sales:10,
     price:33.6,
-    oldPrice:40.6
+    oldPrice:40.6,
+    tabs: ['a', 'b', 'c']
 }
 ```

@@ -346,7 +346,8 @@
 ```js
 {
     errno:0,
-    data:{
+    data:
+    {
         _id:'订单 id',
     },
     message:'errno !== 0 时错误信息'
