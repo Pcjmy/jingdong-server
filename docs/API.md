@@ -380,3 +380,40 @@
     message:'errno !== 0 时错误信息'
 }
 ```
+
+## 订单
+
+```js
+{
+    username: 'zhangsan',
+    _id: '100000',
+    shopId: '商店的 id',
+    shopName: '沃尔玛',
+    isCanceled: false, // 订单是否被取消
+    address: {
+        "username": "zhangsan",
+        "city": "ZhengZhou",
+        "department": "School",
+        "houseNumber": "",
+        "name": "张三",
+        "phone": "",
+    },
+    products: [
+        {
+            product: {
+                "name": "葡萄",
+                "imgUrl": "/images/product/grape.jpg",
+                "sales": 100,
+                "price": 33,
+                "oldPrice": 36,
+                "tabs": [
+                    "all",
+                    "seckill",
+                    "fruit"
+                ],
+            },
+            orderSales: 3
+        }
+    ]
+}
+```
