@@ -1,4 +1,4 @@
-import mongoose from '../db/db'
+const mongoose = require('../db/db')
 
 const Schema = mongoose.Schema({
   name: String,
