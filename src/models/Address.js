@@ -12,6 +12,6 @@ const Schema = mongoose.Schema({
   phone: String
 }, { timestamps: true })
 
-const Address = mongoose.Model('address', Schema)
+const Address = mongoose.model('address', Schema)
 
 module.exports = Address

@@ -182,13 +182,13 @@
 ```js
 {
     errno:0,
-    data:{
-            _id:'收货地址的 id',
-            city:'北京',
-            department:'xx小区',
-            houseNumber:'门牌号',
-            name:'张三',
-            phone:'18677778888'
+    data: {
+        _id:'收货地址的 id',
+        city:'北京',
+        department:'xx小区',
+        houseNumber:'门牌号',
+        name:'张三',
+        phone:'18677778888'
     },
     message:'errno !== 0 错误信息' 
 

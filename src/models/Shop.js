@@ -12,6 +12,6 @@ const Schema = mongoose.Schema({
   slogan: String
 }, { timestamps: true} )
 
-const Shop = mongoose.Model('shop', Schema)
+const Shop = mongoose.model('shop', Schema)
 
 module.exports = Shop

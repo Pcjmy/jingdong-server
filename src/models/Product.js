@@ -13,6 +13,6 @@ const Schema = mongoose.Schema({
   tabs: [String]
 }, { timestamps: true })
 
-const Product = mongoose.Model('product', Schema)
+const Product = mongoose.model('product', Schema)
 
 module.exports = Product
