@@ -7,6 +7,6 @@ async function register(username, password) {
   return newUser
 }
 
-module.exprots = {
+module.exports = {
   register
 }
