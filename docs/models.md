@@ -6,9 +6,9 @@
 
 ```js
 {
-    _id:'xxx',
-    username:'hello',
-    password:'123'
+    _id: 'xxx',
+    username: 'hello',
+    password: '123'
 }
 ```
 
@@ -16,13 +16,13 @@
 
 ```js
 {
-    _id:'xxx',
-    username:'hello',//就和用户产生关联
-    city:'北京',
-    department:'xxx小区',
-    houseNumber:'门牌号',
-    name:'张三',
-    phone:'18655566666'
+    _id: 'xxx',
+    username: 'hello',//就和用户产生关联
+    city: '北京',
+    department: 'xxx小区',
+    houseNumber: '门牌号',
+    name: '张三',
+    phone: '18655566666'
 }
 ```
 
@@ -30,13 +30,13 @@
 
 ```js
 {
-    _id:'xxxxx',
-    name:'沃尔玛',
-    imgUrl:'xxx.png',
-    sales:10000,
-    expressLimt:0,
-    expressPrice:5,
-    slogan:'红色的宣传标语'
+    _id: 'xxxxx',
+    name: '沃尔玛',
+    imgUrl: 'xxx.png',
+    sales: 10000,
+    expressLimt: 0,
+    expressPrice: 5,
+    slogan: '红色的宣传标语'
 }
 ```
 
@@ -44,13 +44,13 @@
 
 ```js
 {
-    _id:'xxx',
-    shopId:'xxxxx' //对应商店的_id
-    name:'番茄',
-    imgUrl:'xxx.png',
-    sales:10,
-    price:33.6,
-    oldPrice:40.6,
+    _id: 'xxx',
+    shopId: 'xxxxx' //对应商店的_id
+    name: '番茄',
+    imgUrl: 'xxx.png',
+    sales: 10,
+    price: 33.6,
+    oldPrice: 40.6,
     tabs: ['a', 'b', 'c']
 }
 ```
