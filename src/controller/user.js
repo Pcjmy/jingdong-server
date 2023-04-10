@@ -7,6 +7,18 @@ async function register(username, password) {
   return newUser
 }
 
+// 登录
+async function login(username, password) {
+  const user = await User.findOne({ username, password })
+  if (user != null) {
+    // 登录成功
+    return true
+  }
+  // 登录失败
+  return false
+}
+
 module.exports = {
-  register
+  register,
+  login
 }
