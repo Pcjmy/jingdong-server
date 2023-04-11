@@ -1,7 +1,7 @@
 const router = require('koa-router')()
 const { SuccessModel, ErrorModel } = require('../res-model/index')
 const loginCheck = require('../middleware/loginCheck')
-const { createAddress } = require('../controller/address')
+const { createAddress, getAddressList, getAddressById } = require('../controller/address')
 
 router.prefix('/api/user/address')
 
@@ -24,7 +24,24 @@ router.post('/', loginCheck, async function(ctx, next) {
 
 // 获取收货地址列表
 
+router.get('/', loginCheck, async function (ctx, next) {
+  // 有登录验证，可以直接获取 session
+  const userInfo = ctx.session.userInfo
+  const username = userInfo.username
+
+  // 获取列表
+  const list = await getAddressList(username)
+
+  ctx.body = new SuccessModel(list)
+})
+
 // 获取单个收货地址
+
+router.get('/:id', loginCheck, async function (ctx, next) {
+  const id = ctx.params.id // 获取路由的动态参数
+  const address = await getAddressById(id)
+  ctx.body = new SuccessModel(address)
+})
 
 // 更新收货地址
 
