@@ -11,6 +11,7 @@ const cors = require('koa2-cors')
 const index = require('./routes/index')
 const users = require('./routes/users')
 const addressRouter = require('./routes/address')
+const shopRouter = require('./routes/shop')
 
 // error handler
 onerror(app)
@@ -56,6 +57,7 @@ app.use(async (ctx, next) => {
 app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 app.use(addressRouter.routes(), addressRouter.allowedMethods())
+app.use(shopRouter.routes(), shopRouter.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
