@@ -1,6 +1,6 @@
 const router = require('koa-router')()
 
-const { SuccessModel, ErrorModel } = require('../res-module/index')
+const { SuccessModel, ErrorModel } = require('../res-model/index')
 const loginCheck = require('../middleware/loginCheck')
 
 router.prefix('/api/order')
