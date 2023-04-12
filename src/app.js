@@ -12,6 +12,7 @@ const index = require('./routes/index')
 const users = require('./routes/users')
 const addressRouter = require('./routes/address')
 const shopRouter = require('./routes/shop')
+const orderRouter = require('./routes/order')
 
 // error handler
 onerror(app)
@@ -58,6 +59,7 @@ app.use(index.routes(), index.allowedMethods())
 app.use(users.routes(), users.allowedMethods())
 app.use(addressRouter.routes(), addressRouter.allowedMethods())
 app.use(shopRouter.routes(), shopRouter.allowedMethods())
+app.use(orderRouter.routes(), orderRouter.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {
