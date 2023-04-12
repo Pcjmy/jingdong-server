@@ -1,4 +1,5 @@
 const Shop = require('../models/Shop')
+const Product = require('../models/Product')
 
 async function getHotList() {
   const list = await Shop.find().sort({ _id: -1 }) // 逆序
@@ -10,7 +11,18 @@ async function getShopInfo(id) {
   return shop
 }
 
+async function getProductsByShopId(id, tab = 'all') {
+  const list = await Product.find({
+    shopId: id,
+    tabs: {
+      $in: tab // 匹配 tabs
+    }
+  }).sort({ _id: -1 }) // 逆序
+  return list
+}
+
 module.exports = {
   getHotList,
-  getShopInfo
+  getShopInfo,
+  getProductsByShopId
 }
