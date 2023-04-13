@@ -50,6 +50,8 @@ async function createOrder(username, data) {
         isCanceled,
         products: productListWithSales
     })
+
+    return newOrder;
 }
 
 module.exports = {
