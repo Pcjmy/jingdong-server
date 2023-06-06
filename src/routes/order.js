@@ -2,7 +2,7 @@ const router = require('koa-router')()
 
 const { SuccessModel, ErrorModel } = require('../res-model/index')
 const loginCheck = require('../middleware/loginCheck')
-const { createOrder } = require('../controller/order')
+const { createOrder, getOrderList } = require('../controller/order')
 
 router.prefix('/api/order')
 
@@ -23,6 +23,14 @@ router.post('/', loginCheck, async function(ctx, next) {
         console.error(ex)
         ctx.body = new ErrorModel(10005, '订单创建失败')
     }
+})
+
+// 获取订单列表
+router.get('/', loginCheck, async function(ctx, next) {
+    const userInfo = ctx.session.userInfo
+    const username = userInfo.username
+    const list = await getOrderList(username)
+    ctx.body = new SuccessModel(list)
 })
 
 module.exports = router

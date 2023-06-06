@@ -54,6 +54,12 @@ async function createOrder(username, data) {
     return newOrder;
 }
 
+async function getOrderList(username) {
+    const list = await Order.find({ username }).sort({_id: -1})
+    return list
+}
+
 module.exports = {
-    createOrder
+    createOrder,
+    getOrderList
 }
